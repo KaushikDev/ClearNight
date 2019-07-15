@@ -1,0 +1,88 @@
+#back{
+    position: fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(180deg, #000000, #222222, rgba(36, 36, 119, 0.712), #eeeeee);
+}
+
+.moon{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top:20%;
+    left: 30%;
+    box-shadow: 10px 5px 50px 5px white;
+}
+.stars{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    animation-name: twinkle;
+    animation-iteration-count: infinite;
+    position:absolute;
+}
+
+.star1{
+    margin-top: 10%;
+    margin-left: 10%;
+    animation-duration: 2s;
+    }
+.star2{
+    margin-top: 20%;
+    margin-left: 15%;
+    animation-duration: 1s;
+}
+.star3{
+    margin-top: 25%;
+    margin-left: 30%;
+    animation-duration: 3s;
+}
+.star4{
+    margin-top: 5%;
+    margin-left: 40%;
+    animation-duration: 1.5s;
+}
+.star5{
+    margin-top: 15%;
+    margin-left: 60%;
+    animation-duration: 1s;
+}
+.star6{
+    margin-top: 18%;
+    margin-left: 65%;
+    animation-duration: 2.5s;
+}
+.star7{
+    margin-top: 13%;
+    margin-left: 70%;
+    animation-duration: 1.5s;
+}
+.star8{
+    margin-top: 1%;
+    margin-left: 80%;
+    animation-duration: 3.5s;
+}
+.star9{
+    margin-top: 7%;
+    margin-left: 90%;
+    animation-duration: 4s;
+}
+.star10{
+    margin-top: 8%;
+    margin-left: 95%;
+    animation-duration: 3.5s;
+}
+
+@keyframes twinkle{
+    20%{
+        transform:scale(0.5);
+        opacity: 0.5;
+    }
+}
