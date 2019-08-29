@@ -1,88 +1,218 @@
-#back{
-    position: fixed;
-    padding:0;
-    margin:0;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: linear-gradient(180deg, #000000, #222222, rgba(36, 36, 119, 0.712), #eeeeee);
+*{
+    padding: 0;
+    margin: 0;
 }
 
-.moon{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    top:20%;
-    left: 30%;
-    box-shadow: 10px 5px 50px 5px white;
+#back {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #000000,
+    #222222,
+    rgba(36, 36, 119, 0.712),
+    #eeeeee
+  );
 }
-.stars{
+
+.moon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: radial-gradient(#eee, #ddd, #ccc);
+  position: absolute;
+  top: 20%;
+  top: 150px;
+  left: 30%;
+  left: 150px;
+  box-shadow: 10px 5px 50px 5px white;
+}
+.stars {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  animation-name: twinkle;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+.star1 {
+  margin-top: 10%;
+  margin-left: 10%;
+  animation-duration: 2s;
+}
+.star2 {
+  margin-top: 20%;
+  margin-left: 15%;
+  animation-duration: 1s;
+}
+.star3 {
+  margin-top: 25%;
+  margin-left: 30%;
+  animation-duration: 3s;
+}
+.star4 {
+  margin-top: 5%;
+  margin-left: 40%;
+  animation-duration: 1.5s;
+}
+.star5 {
+  margin-top: 15%;
+  margin-left: 60%;
+  animation-duration: 1s;
+}
+.star6 {
+  margin-top: 18%;
+  margin-left: 65%;
+  animation-duration: 2.5s;
+}
+.star7 {
+  margin-top: 13%;
+  margin-left: 70%;
+  animation-duration: 1.5s;
+}
+.star8 {
+  margin-top: 1%;
+  margin-left: 80%;
+  animation-duration: 3.5s;
+}
+.star9 {
+  margin-top: 7%;
+  margin-left: 90%;
+  animation-duration: 4s;
+}
+.star10 {
+  margin-top: 8%;
+  margin-left: 95%;
+  animation-duration: 3.5s;
+}
+
+.craters {
+  border-radius: 50%;
+  background-color: #ccc;
+  /* border: 2px #bbb dotted; */
+  position: absolute;
+}
+
+.crater1 {
+  top: 175px;
+  left: 175px;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 5px 5px #ccc;
+}
+.crater2 {
+  top: 160px;
+  left: 210px;
+  width: 5px;
+  height: 5px;
+  box-shadow: 0 0 2px 2px #ccc;
+}
+.crater3 {
+  top: 210px;
+  left: 190px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 0 5px 5px #ccc;
+}
+.crater4 {
+  top: 190px;
+  left: 220px;
+  width: 7px;
+  height: 7px;
+  box-shadow: 0 0 5px 5px #ccc;
+}
+.crater5 {
+  top: 200px;
+  left: 160px;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 5px 5px #ccc;
+}
+
+.meteor{
+    position: absolute;
+    top: 1%;
+    left: 100%;
     width: 5px;
     height: 5px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    animation-name: twinkle;
+    border-radius : 50%;
+    box-shadow: 0 0 5px 5px white;
+    animation-name: meteoric;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
-    position:absolute;
+
+}
+.meteor::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 50px;
+    height: 0;
+    background: white;
+    transform: rotate(-10deg);
+    box-shadow: 10px -5px 20px 10px white;
 }
 
-.star1{
-    margin-top: 10%;
-    margin-left: 10%;
-    animation-duration: 2s;
-    }
-.star2{
-    margin-top: 20%;
-    margin-left: 15%;
-    animation-duration: 1s;
-}
-.star3{
-    margin-top: 25%;
-    margin-left: 30%;
-    animation-duration: 3s;
-}
-.star4{
-    margin-top: 5%;
-    margin-left: 40%;
-    animation-duration: 1.5s;
-}
-.star5{
-    margin-top: 15%;
-    margin-left: 60%;
-    animation-duration: 1s;
-}
-.star6{
-    margin-top: 18%;
-    margin-left: 65%;
-    animation-duration: 2.5s;
-}
-.star7{
-    margin-top: 13%;
-    margin-left: 70%;
-    animation-duration: 1.5s;
-}
-.star8{
-    margin-top: 1%;
-    margin-left: 80%;
-    animation-duration: 3.5s;
-}
-.star9{
-    margin-top: 7%;
-    margin-left: 90%;
-    animation-duration: 4s;
-}
-.star10{
-    margin-top: 8%;
-    margin-left: 95%;
-    animation-duration: 3.5s;
+.poles{
+    position: absolute;
+    width: 20px;
+    height: 175px;
+    background: #000;
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
 }
 
-@keyframes twinkle{
-    20%{
-        transform:scale(0.5);
-        opacity: 0.5;
+.pole1{
+    left: 10%;
+}
+.pole2{
+    left: 30%;
+}
+.pole3{
+    left: 50%;
+}
+.pole4{
+    left: 70%;
+}
+.pole5{
+    left: 90%;
+}
+
+
+.crossbars{
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background: #000;
+}
+.crossbar1{
+    bottom: 100px;
+}
+
+.crossbar2{
+    bottom: 25px;
+}
+
+@keyframes twinkle {
+  20% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes meteoric{
+    100%{
+        left: 1%;
+        top: 25%;
+        opacity: 0;
     }
 }
